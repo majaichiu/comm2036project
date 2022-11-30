@@ -1,0 +1,331 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+  .sidebar a {
+    padding: 32px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+  .sidebar a:hover {
+    color: #ff00ed;
+}
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    margin-left: 50px;
+}
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+.header {
+    position: absolute;
+    text-align: center;
+    color: white;
+    pointer-events: none;
+}
+
+.header-image {
+    filter: blur(4px);
+    opacity: 0.6;
+}
+
+.header-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    font-size: 90px;
+    font-style: italic;
+    width: 66%;
+}
+
+.header-bottom {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 8px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.openbtn {
+    font-size: 60px;
+    margin-left: 1.2%;
+    cursor: pointer;
+    color: #818181;
+    border: none;
+    position: fixed;
+    transition: 0.3s;
+}
+  
+.openbtn:hover {
+    color: #ff00ed;
+}
+
+.article {
+    position: absolute;
+    color: white;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 21.5cm;
+    width: 65%;
+    text-align: center;
+}
+
+.title {
+    padding-top: 3cm;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.subtitle {
+    font-size: 30px;
+    padding-top: 1cm;
+}
+
+.art1youtube {
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+    transition: transform .2s;
+}
+
+.art1youtube:hover {
+    transform: scale(1.2);
+}
+
+.paragraph {
+    padding-bottom: 2cm;
+    font-size: 24px;
+    line-height: 15mm;
+}
+
+.art-image {
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+}
+
+.accordion {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 24px;
+    transition: 0.4s;
+    font-weight: bold;
+}
+  
+.accordion.active, .accordion:hover {
+    background-color: #333;
+}
+  
+.accordion:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+  
+.accordion.active:after {
+    content: "\2212";
+}
+  
+.panel {
+    padding: 0 18px;
+    background-color: black;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-bottom: 5px solid #555;
+}
+
+.panel-article {
+    text-align: left;
+    font-size: 24px;
+    line-height: 15mm;
+}
+
+.subtitle-nft {
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 0.5cm;
+    color: #ff00ed;
+}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #555;
+    background-color: black;
+    width: 27%;
+    height: 500px;
+}
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: white;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #222;
+}
+  
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: #333;
+}
+  
+  /* Style the tab content */
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #555;
+    width: 70%;
+    border-left: none;
+    height: 500px;
+    margin-bottom: 3cm;
+}
+
+.tab-article {
+    text-align: left;
+    color: white;
+}
+
+.tab-image {
+    padding-top: 0.5cm;
+}
+
+.nft-grid {
+    background-color: #222;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.nft-text {
+    color: white;
+    text-align: left;
+    padding-left: 10%;
+    width: 90%;
+    font-size: 24px;
+    line-height: 10mm;
+}
+
+.paragraph-nft {
+    font-size: 24px;
+    line-height: 15mm;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    padding-top: 0.5cm;
+    padding-bottom: 1cm;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+  
+.flip-card-back {
+    background-color: #333;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card-text {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 18px;
+}
+
+.flips {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.list {
+    font-size: 24px;
+    margin-bottom: 3cm;
+}
